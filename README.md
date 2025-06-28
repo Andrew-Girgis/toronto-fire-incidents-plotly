@@ -53,7 +53,7 @@ python app.py
 # open http://127.0.0.1:8050 in your browser
 ```
 ## Folder Structure
-
+```
 .
 ├── app.py             # Dash app (single-file, 250 LOC)
 ├── requirements.txt   # python libs for Pip/Render
@@ -62,7 +62,7 @@ python app.py
     ├── style.css      # minimal Tailwind-ish styling
     ├── script.js      # tiny fade-in JS (optional)
     └── screenshot.png # hero image for README
-
+```
 ## Data Sources
 
 | Dataset                                  | Link                                                                                                                       |
