@@ -67,9 +67,9 @@ python app.py
 
 | Dataset                                  | Link                                                                                                                       |
 | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| Toronto Fire Service Incidents 2011-2024 | [Open Data Portal](https://open.toronto.ca/dataset/toronto-fire-service-incidents/)                                        |
-| City Ward Boundaries (25-ward, 2018)     | [Open Data Portal](https://open.toronto.ca/dataset/city-ward-boundary/)                                                    |
-| 2021 Census Ward Profiles                | [Ward Profiles Excel](https://www.toronto.ca/city-government/data-research-maps/neighbourhoods-communities/ward-profiles/) |
+| Toronto Fire Service Incidents 2011-2024 | [Open Data Portal]([https://open.toronto.ca/dataset/toronto-fire-service-incidents/](https://open.toronto.ca/dataset/fire-incidents/))|
+| City Ward Boundaries (25-ward, 2018)     | [Open Data Portal]([https://open.toronto.ca/dataset/city-ward-boundary/](https://open.toronto.ca/dataset/city-wards/))|
+| 2021 Census Ward Profiles                | [Open Data Portal](https://open.toronto.ca/dataset/ward-profiles-25-ward-model/)|
 
 ## Road-map / ideas
 
@@ -77,14 +77,12 @@ python app.py
 
 - ⏱ Animate incidents over time to spot seasonal patterns.
 
-- 🗺 Switch to a hex-bin heatmap for point density.
-
 - 🔔 Overlay response times to help locate future fire halls.
 
 ## 🙏 Credits
 
 Thanks to:
-- **[Jordan Raghunandan](https://www.linkedin.com/in/jordan-raghunandan-398608a6/)** – Host & Workshop Lead  
+- **[Jordan Raghunandan](https://www.linkedin.com/in/jordan-raghunandan-398608a6/)** – Host & Workshop Lead // Senior Business Intelligence Analyst @ Ivari Canada
 - **[Runqi Han](https://www.linkedin.com/in/runqi-han/)** – Customer Success Solution Engineer @ Plotly  
 - **Hammad Khan** – Front-End Engineer @ Plotly
 
