@@ -67,8 +67,8 @@ python app.py
 
 | Dataset                                  | Link                                                                                                                       |
 | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| Toronto Fire Service Incidents 2011-2024 | [Open Data Portal]([https://open.toronto.ca/dataset/toronto-fire-service-incidents/](https://open.toronto.ca/dataset/fire-incidents/))|
-| City Ward Boundaries (25-ward, 2018)     | [Open Data Portal]([https://open.toronto.ca/dataset/city-ward-boundary/](https://open.toronto.ca/dataset/city-wards/))|
+| Toronto Fire Service Incidents 2011-2024 | [Open Data Portal](https://open.toronto.ca/dataset/toronto-fire-service-incidents/](https://open.toronto.ca/dataset/fire-incidents/))|
+| City Ward Boundaries (25-ward, 2018)     | [Open Data Portal](https://open.toronto.ca/dataset/city-ward-boundary/](https://open.toronto.ca/dataset/city-wards/))|
 | 2021 Census Ward Profiles                | [Open Data Portal](https://open.toronto.ca/dataset/ward-profiles-25-ward-model/)|
 
 ## Road-map / ideas
