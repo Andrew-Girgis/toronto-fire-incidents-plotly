@@ -106,12 +106,21 @@ fig_points = px.scatter_mapbox(
 ).update_layout(margin=dict(t=0, r=0, l=0, b=0))
 
 fig_choro = px.choropleth_mapbox(
-    df_counts, geojson=tor_geo,
-    locations="Incident_Ward", featureidkey=f"properties.{WARD_KEY}",
-    color="FireCount", color_continuous_scale="OrRd",
+    df_rates,                 
+    geojson=tor_geo,
+    locations="Incident_Ward",
+    featureidkey=f"properties.{WARD_KEY}",
+    color="FireCount",
+    color_continuous_scale="OrRd",
+    hover_data={
+        "FireCount": True,
+        "Population": True,
+        "FiresPer1000": ":.2f",   # format = two decimals
+    },
     mapbox_style="carto-positron",
     center=TORONTO_CENTER, zoom=9, opacity=0.6, height=650
 ).update_layout(margin=dict(t=0, r=0, l=0, b=0))
+
 
 fig_rate = px.choropleth_mapbox(
     df_rates,
@@ -120,10 +129,16 @@ fig_rate = px.choropleth_mapbox(
     featureidkey=f"properties.{WARD_KEY}",
     color="FiresPer1000",
     color_continuous_scale="YlGnBu",
+    hover_data={
+        "FiresPer1000": ":.2f",
+        "FireCount": True,
+        "Population": True,
+    },
     mapbox_style="carto-positron",
     center=TORONTO_CENTER, zoom=9, opacity=0.75, height=650,
     labels={"FiresPer1000": "Fires / 1 000 pop"},
 ).update_layout(margin=dict(t=0, r=0, l=0, b=0))
+
 
 
 # ───────── 6. Dash app ─────────
