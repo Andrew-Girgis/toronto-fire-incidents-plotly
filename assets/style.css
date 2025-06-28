@@ -1,0 +1,137 @@
+/* --- Google Font --------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+/* --- Global -------------------------------------------------------- */
+:root {
+  --accent: #e04e39;    /* fire-engine red */
+  --bg:     #f7f8fa;
+  --fg:     #1c1e21;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+/* --- Header -------------------------------------------------------- */
+header {
+  padding: 1.5rem 2rem;
+  background: var(--accent);
+  color: white;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* --- Radio buttons ------------------------------------------------- */
+.dash-radio-item label {
+  margin-right: 1rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+input[type="radio"]:checked + label {
+  color: var(--accent);
+}
+
+/* --- Graph container ---------------------------------------------- */
+#map-area {
+  max-width: 1100px;
+  margin: 1.5rem auto 3rem;
+  box-shadow: 0 4px 14px rgba(0,0,0,.08);
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+}
+
+/* --- Plot margins wipe -------------------------------------------- */
+.js-plotly-plot, .dash-graph {
+  height: 650px !important;   /* keep your chosen height */
+}
+
+/* Intro paragraph styling */
+#intro {
+    max-width: 900px;
+    margin: 1.25rem auto 0;
+    line-height: 1.55;
+    font-size: 1rem;
+    color: #333;
+  }
+  #intro a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--accent);
+  }
+  #intro em   { color: #e04e39; font-weight: 600; }
+  #intro strong { font-weight: 600; }
+
+  #insights {
+    max-width: 900px;
+    margin: 1.75rem auto 2rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+  }
+  #insights code  { background:#f1f3f5; padding:2px 4px; border-radius:4px; }
+  #insights q     { font-style: italic; color:#e04e39; }
+
+  #credits {
+    max-width: 900px;
+    margin: 2rem auto 0.5rem;
+    font-size: 0.95rem;
+    color: #444;
+    text-align: center;
+  }
+  #credits a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--accent);
+  }
+  #credits a:hover {
+    text-decoration: underline;
+  }
+  
+  /* turn default radios into Bootstrap-style pills */
+.map-toggle .dash-radio-item {
+    display: inline-block;
+    margin-right: 0.5rem;
+  }
+  
+  .map-toggle input[type="radio"] {
+    /* hide the native bullet */
+    position: absolute;
+    opacity: 0;
+  }
+  
+  .map-toggle label {
+    padding: 6px 12px;
+    border: 1px solid var(--accent);
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--accent);
+    user-select: none;
+  }
+  
+  .map-toggle input[type="radio"]:checked + label {
+    background: var(--accent);
+    color: white;
+  }
+
+  #connect {
+    max-width: 900px;
+    margin: 1.5rem auto 2rem;
+    text-align: center;
+    font-size: 0.95rem;
+    color: #444;
+  }
+  #connect a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--accent);
+  }
+  #connect a:hover { text-decoration: underline; }
+  
