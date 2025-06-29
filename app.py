@@ -99,14 +99,21 @@ df_rates = (
 
 # ───────── 5. Figures ─────────
 fig_points = px.scatter_mapbox(
-    df_fires, lat="Latitude", lon="Longitude",
-    hover_data=["Final_Incident_Type", "TFS_Alarm_Time"],
+    df_fires,
+    lat="Latitude", lon="Longitude",
+    hover_data={
+        "Incident_Ward": True,            # new
+        "Final_Incident_Type": True,
+        "TFS_Alarm_Time": True,
+    },
     mapbox_style="carto-positron",
     center=TORONTO_CENTER, zoom=10, height=650
 ).update_layout(margin=dict(t=0, r=0, l=0, b=0))
 
+
+# ----- Total-fires choropleth (use df_rates so pop is available) -------
 fig_choro = px.choropleth_mapbox(
-    df_rates,                 
+    df_rates,                             # ← was df_counts
     geojson=tor_geo,
     locations="Incident_Ward",
     featureidkey=f"properties.{WARD_KEY}",
@@ -115,11 +122,14 @@ fig_choro = px.choropleth_mapbox(
     hover_data={
         "FireCount": True,
         "Population": True,
-        "FiresPer1000": ":.2f",   # format = two decimals
     },
     mapbox_style="carto-positron",
-    center=TORONTO_CENTER, zoom=9, opacity=0.6, height=650
+    center=TORONTO_CENTER,
+    zoom=9,
+    opacity=0.6,
+    height=650,
 ).update_layout(margin=dict(t=0, r=0, l=0, b=0))
+
 
 
 fig_rate = px.choropleth_mapbox(
@@ -129,7 +139,7 @@ fig_rate = px.choropleth_mapbox(
     featureidkey=f"properties.{WARD_KEY}",
     color="FiresPer1000",
     color_continuous_scale="YlGnBu",
-    hover_data={
+    hover_data={ 
         "FiresPer1000": ":.2f",
         "FireCount": True,
         "Population": True,
@@ -138,6 +148,7 @@ fig_rate = px.choropleth_mapbox(
     center=TORONTO_CENTER, zoom=9, opacity=0.75, height=650,
     labels={"FiresPer1000": "Fires / 1 000 pop"},
 ).update_layout(margin=dict(t=0, r=0, l=0, b=0))
+
 
 
 
